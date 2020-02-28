@@ -31,9 +31,9 @@ public class StringUtil {
 	     String str = null;
        int highPos, lowPos;
        Random random = new Random();
-       highPos = (176 + Math.abs(random.nextInt(40)));//区码，0xA0打头，从第16区开始，即0xB0=11*16=176,16~55一级汉字，56~87二级汉字
+       highPos = (176 + Math.abs(random.nextInt(39)));//区码，0xA0打头，从第16区开始，即0xB0=11*16=176,16~55一级汉字，56~87二级汉字
        random=new Random();
-       lowPos = 161 + Math.abs(random.nextInt(95));//位码，0xA0打头，范围第1~94列
+       lowPos = 161 + Math.abs(random.nextInt(94));//位码，0xA0打头，范围第1~94列
        byte[] bArr = new byte[2];
       
        bArr[0] = (new Integer(highPos)).byteValue();
